@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>計算機</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">    
+</head>
+<body>
+    <div id="app" class="calculator">
+        <div class="monitor">
+            <div class="log">{{ expression }}</div>
+            <div class="show-number">{{ formatNumber }}</div>            
+        </div>
+        <div class="keyboard">
+            <div class="button" data-key="7" @click="getNumberSet(7)">7</div>
+            <div class="button" data-key="8" @click="getNumberSet(8)">8</div>
+            <div class="button" data-key="9" @click="getNumberSet(9)">9</div>
+            <div class="button" data-key="/" @click="devide">&divide;</div>
+            <div class="button" data-key="4" @click="getNumberSet(4)">4</div>
+            <div class="button" data-key="5" @click="getNumberSet(5)">5</div>
+            <div class="button" data-key="6" @click="getNumberSet(6)">6</div>
+            <div class="button" data-key="*" @click="times">&times;</div>
+            <div class="button" data-key="1" @click="getNumberSet(1)">1</div>
+            <div class="button" data-key="2" @click="getNumberSet(2)">2</div>
+            <div class="button" data-key="3" @click="getNumberSet(3)">3</div>
+            <div class="button" data-key="+" @click="plus">&plus;</div>
+            <div class="button" data-key="0" @click="getNumberSet(0)">0</div>
+            <div class="button" data-key="00" @click="addZero">00</div>
+            <div class="button" data-key="." @click="decimal">&period;</div>
+            <div class="button" data-key="-" @click="minus">&minus;</div>
+            <div class="button ac" data-key="ac" @click="clear">AC</div>
+            <div class="button ettl" data-key="delete" @click="shiftToLeft">&#x232b;</div>
+            <div class="button equal" data-key="=" @click="equal">&equals;</div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>    
+    <script src="js/all.js"></script>    
+    
+</body>
+</html>
