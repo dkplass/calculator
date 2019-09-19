@@ -74,7 +74,7 @@ var app = new Vue({
             this.expression = this.expression.substring(0, this.expression.length - 1);
         },
         equal: function () {            
-            this.currentNumber = eval(this.expression).toFixed(4).toString();                        
+            this.currentNumber = eval(this.expression).toString();                        
             this.expression = this.currentNumber.toString();                         
         }       
     },
@@ -88,8 +88,7 @@ var app = new Vue({
             }            
             
             if(display.length > 11) {
-                this.currentNumber = display.substr(0, 11);
-                alert("超出本計算機運算最大值");
+                this.currentNumber = display.substr(0, 11);                
                 return display.substr(0, 11);
             } else {
                 return display;
