@@ -88,7 +88,8 @@ var app = new Vue({
             }            
             
             if(display.length > 11) {
-                this.currentNumber = display.substr(0, 11);                
+                this.currentNumber = display.substr(0, 11); 
+                this.expression =  this.currentNumber;
                 return display.substr(0, 11);
             } else {
                 return display;
